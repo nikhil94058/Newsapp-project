@@ -1,0 +1,49 @@
+/* CSS for the HomePage component */
+
+/* Center the content vertically and horizontally */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Style for the content container */
+.container {
+  text-align: center;
+  padding: 20px;
+  background-color: #120a0a;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+
+/* Style for the heading */
+h1 {
+  font-size: 2rem;
+  color: #140e0e;
+  margin-bottom: 20px;
+}
+
+/* Style for the main content */
+p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Optional: Add a button or link style */
+a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+a:hover {
+  background-color: #0056b3;
+}
