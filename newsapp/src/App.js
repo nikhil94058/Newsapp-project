@@ -2,23 +2,32 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Components/Home';
-import About from './Components/About';
 import Navbar from './Components/Navbar';
-import './App.css'
-
+import Fetchdata from './Components/Fetchdata';
 
 function App() {
+  let search = "No Found";
   return (
-    <>hello
+    <>
       <Router>
-        <div className='navbar'><Navbar /></div>
+        <Navbar />
         <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/about" component={<About />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/india" element={<Home searchQuery="india" />} />
+          <Route path="/business" element={<Home searchQuery="business" />} />
+          <Route path="/technology" element={<Home searchQuery="technology" />} />
+          <Route path="/sports" element={<Home searchQuery="sports" />} />
+          <Route path="/entertainment" element={<Home searchQuery="entertainment" />} />
+          <Route path="/health" element={<Home searchQuery="health" />} />
+          <Route path="/science" element={<Home searchQuery="science" />} />
+          <Route path="/country" element={<Home searchQuery="country" />} />
+          <Route path="/Search" element={<Home searchQuery={search} />} />
         </Routes>
       </Router>
     </>
   );
 }
+
+
 
 export default App;
