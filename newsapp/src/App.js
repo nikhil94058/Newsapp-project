@@ -3,8 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Components/Home';
 import Navbar from './Components/Navbar';
-import Fetchdata from './Components/Fetchdata';
-
+import Footer from './Components/Footer';
 function App() {
   let search = "No Found";
   return (
@@ -22,7 +21,9 @@ function App() {
           <Route path="/science" element={<Home searchQuery="science" />} />
           <Route path="/country" element={<Home searchQuery="country" />} />
           <Route path="/Search" element={<Home searchQuery={search} />} />
+          <Route path="/555" element={<Home searchQuery="Headlines" />} />
         </Routes>
+        <Footer />
       </Router>
     </>
   );

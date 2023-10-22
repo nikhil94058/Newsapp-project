@@ -1,0 +1,97 @@
+/* Add your CSS in an external CSS file or use a CSS-in-JS solution */
+/* You can include these styles in your component if you are using Styled Components */
+
+/* Footer container */
+footer {
+  background-color: #f8f9fa;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+/* Social media icons */
+.btn-primary.btn-floating {
+  margin: 1rem;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary.btn-floating:hover {
+  background-color: #2a3f5f;
+}
+
+/* Form section */
+section.form {
+  background-color: violet;
+}
+
+/* Newsletter form */
+form {
+  text-align: center;
+}
+
+form p {
+  font-weight: bold;
+}
+
+/* Input field */
+.form-control {
+  background-color: transparent;
+  border: 2px solid #3b5998;
+  border-radius: 0;
+}
+
+.form-control:focus {
+  border-color: #2a3f5f;
+  box-shadow: none;
+}
+
+/* Subscribe button */
+.btn-primary.mb-4 {
+  background-color: #3b5998;
+  border: none;
+}
+
+.btn-primary.mb-4:hover {
+  background-color: #2a3f5f;
+}
+
+/* Text section */
+section.text {
+  background-color: red;
+  color: #fff;
+  padding: 1rem;
+}
+
+/* Links section */
+section.links {
+  background-color: black;
+  color: #fff;
+  text-decoration-color: white;
+  padding: 1rem;
+}
+
+/* Links section headings */
+h5 {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* Links list */
+.list-unstyled {
+  padding: 0;
+  list-style: none;
+}
+
+/* Individual links */
+.list-unstyled li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Copyright section */
+.text-center.p-3 {
+  background-color: rgba(0, 0, 0, 0.2);
+}
