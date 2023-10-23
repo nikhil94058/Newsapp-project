@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import "./Component.css"; // Import your CSS file with the heading styles
+import Stories from "./Stories";
 
 function Headlines({ searchQuery }) {
   const [data, setData] = useState([]);
@@ -66,25 +67,31 @@ function Headlines({ searchQuery }) {
             ))
           ) : "No results found"}
         </div>
-        <div className="pagination-container"> {/* Apply this class to the pagination container */}
+        <div className="pagination-container" > {/* Apply this class to the pagination container */}
           {data.length > 0 && (
-            <div className="pagination">
+            <div className="pagination d-flex justify-content-center align-items-center mt-4">
               <button
                 onClick={() => handlePageChange(currentPage - 1)}
                 disabled={currentPage === 1}
+                className={`bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded ${currentPage === 1 ? 'disabled' : 'btn btn-primary'}`}
               >
                 Previous
               </button>
               <button
                 onClick={() => handlePageChange(currentPage + 1)}
                 disabled={currentPage * itemsPerPage >= data.length}
+                className={`bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded ${currentPage * itemsPerPage >= data.length ? 'disabled' : 'btn btn-primary'}`}
               >
                 Next
               </button>
             </div>
+
+
+
           )}
         </div>
       </div>
+      <Stories />
     </div>
   );
 }

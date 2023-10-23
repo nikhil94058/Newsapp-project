@@ -43,7 +43,7 @@ function Fetchdata({ searchQuery }) {
             <div className="card-content">
               <h1 className="text-xl font-semibold py-2">{item.title}</h1>
               <div className="image-container">
-                <img src={item.urlToImage} alt="" className="card-image" />
+                <img src={item.urlToImage} alt="" className="card-image" style={{ width: "470px" }} />
               </div>
               <p className="py-2">{item.description}</p>
               <a href={item.url} target="_blank" className="text-blue-500 hover:underline inline-block py-2">

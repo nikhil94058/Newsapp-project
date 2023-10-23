@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Component.css"
+import Stories from "./Stories";
 export function NewsBlock({ imageUrl, date, title, description }) {
   return (
     <div className="bg-white shadow-lg rounded-lg overflow-hidden mb-4">
       <div className="position-relative">
-        <img src={imageUrl} alt="News" className="w-100 h-36 h-sm-48 object-cover object-center transform scale-1 transition duration-300 hover-scale-1.05" />
-        <div className="position-absolute top-0 left-0 w-100 h-100 bg-red-500 opacity-0 hover-opacity-60 transition-opacity duration-300"></div>
-        <div className="position-absolute top-0 left-0 w-100 h-100 text-white text-center opacity-0 hover-opacity-100 d-flex align-items-center justify-content-center transition-opacity duration-300">
+        <img src={imageUrl} alt="News" className="h-64 object-cover object-center transform scale-1 transition duration-300 hover:scale-1.05" />
+        <div className="position-absolute top-0 left-0 w-100 h-100 bg-red-500 opacity-0 hover:opacity-60 transition-opacity duration-300"></div>
+        <div className="position-absolute top-0 left-0 w-100 h-100 text-white text-center opacity-0 hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
           <p className="text-lg font-weight-bold breaking-news">Breaking News</p>
         </div>
       </div>
       <div className="px-6 py-4">
         <div className="text-gray-700 text-base mb-2">{date}</div>
-        <h2 className="font-weight-bold text-xl mb-2">{title}</h2>
+        <h2 className="font-weight-bold text-2xl mb-2">{title}</h2>
         <p className="text-gray-600">{description}</p>
       </div>
       <div className="px-6 py-4">
-        <a href="#" className="text-indigo-500 hover-underline text-sm font-weight-bold">
+        <a href="#" className="text-indigo-500 hover:underline text-sm font-weight-bold">
           Read More
         </a>
       </div>
@@ -124,6 +125,7 @@ export function NewsSection() {
                 description={item.description}
               />
             ))}
+
         </div>
       )}
       <Pagination
@@ -132,6 +134,9 @@ export function NewsSection() {
         itemsPerPage={itemsPerPage}
         onPageChange={handlePageChange}
       />
+      <h1 style={{ color: "orange" }}>Today India</h1>
+      <Stories />
+
     </section>
   );
 }

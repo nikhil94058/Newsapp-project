@@ -1,9 +1,10 @@
 import React from "react";
+import Comments from "./Comments";
 
 
 function Signup() {
   return (
-    <section className="vh-100">
+    <div> <section className="vh-100">
       <div className="container h-100">
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col-lg-12 col-xl-11">
@@ -76,7 +77,9 @@ function Signup() {
           </div>
         </div>
       </div>
+
     </section>
+      <section style={{ marginTop: "400px" }}><Comments /></section></div>
   );
 }
 

@@ -80,3 +80,66 @@ h1 {
   max-width: 48%;
   padding: 0;
 }
+/* stories.css */
+
+/* Container for story cards */
+.stories-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-wrap: wrap;
+}
+
+/* Individual story card styles */
+.story-card {
+  max-width: 20rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.story-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Image inside the story card */
+.story-image {
+  width: 100%;
+  height: auto;
+  max-height: 15rem;
+  object-fit: cover;
+}
+
+/* Text content within the story card */
+.story-card .px-6 {
+  padding: 1rem 2rem;
+}
+
+.story-card .font-bold {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.story-card .text-base {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Tags at the bottom of the story card */
+.story-tag {
+  background-color: #f0f0f0;
+  border-radius: 1rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #333;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+}

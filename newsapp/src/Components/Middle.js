@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Fetchdata from './Fetchdata';
 import Home from './Home';
 import { Link } from 'react-router-dom';
+import HeadlinesBar from './Headlinesbar';
 
 function Middle({ onSearch }) {
   const [search, setSearch] = useState('');
@@ -12,10 +13,11 @@ function Middle({ onSearch }) {
 
   return (
     <div className="container-fluid bg-dark text-white p-4 h-screen flex flex-col justify-center items-center">
-      <h1 className="text-3xl text-orange mb-4">The News Application</h1>
-      <p className="text-base text-gray-400 mb-4">
+      <HeadlinesBar />
+      <h1 className="black-bg text-light">The News Application</h1>
+      <h5 className="black-bg text-light">
         Welcome to our website. Discover the latest news and updates.
-      </p>
+      </h5>
 
       <div className="input-group">
         <input
